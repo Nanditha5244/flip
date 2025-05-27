@@ -1,0 +1,123 @@
+@import url("https://fonts.cdnfonts.com/css/amazing-grotesk");
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(172, 127, 255, 0.229);
+  color: black;
+}
+
+.card_container {
+  perspective: 900px;
+  width: 350px;
+  height: 250px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.card_container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  position: relative;
+}
+
+.frontcard,
+.backcard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgb(103, 2, 120);
+}
+
+.frontcard {
+  background-color: rgb(216, 196, 196);
+  padding: 20px;
+}
+
+.frontcard img {
+  height: 75px;
+  width: 200px;
+  margin: 65px auto;
+  display: block;
+}
+
+.backcard {
+  padding: 2px;
+  border-radius: 15px;
+  transform: rotateY(180deg);
+  background: radial-gradient(
+    circle,
+    rgb(102, 170, 2) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  background-size: 300% 300%;
+}
+
+.backcard_content {
+  border-radius: 13px;
+  padding: 10px;
+  font-weight: 500;
+  background: linear-gradient(to right, rgb(67, 16, 121), rgb(130, 90, 190));
+  text-align: left;
+  color: rgb(35, 226, 162);
+}
+
+.name {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: aquamarine;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.description {
+  color: antiquewhite;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: 1px solid rgb(236, 150, 89);
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #be477a;
+  color: blue;
+  border-color: blueviolet;
+}
